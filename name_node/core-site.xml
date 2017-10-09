@@ -1,0 +1,4 @@
+<property>
+	<name>fs.defaultFS</name>
+	<value>hdfs://hadoopnn</value>
+</property>
