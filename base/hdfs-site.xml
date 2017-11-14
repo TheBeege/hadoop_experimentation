@@ -1,8 +1,14 @@
-<property>
-	<name>dfs.namenode.name.dir</name>
+<configuration>
+    <property>
+        <name>dfs.replication</name>
+        <value>3</value>
+    </property>
+    <property>
+        <name>dfs.namenode.name.dir</name>
         <value>/namenode/dfs/name</value>
-</property>
-<property>
-	<name>dfs.datanode.data.dir</name>
+    </property>
+    <property>
+        <name>dfs.datanode.data.dir</name>
         <value>/datanode/dfs/data</value>
-</property>
+    </property>
+</configuration>
