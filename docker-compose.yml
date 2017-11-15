@@ -10,13 +10,13 @@ services:
         aliases:
           - "hadoop_name_node"
 
-  hadoop_seconadry_node_manager:
+  hadoop_secondary_node_manager:
     build:
-      context: ./seconadry_node_manager
+      context: ./secondary_node_manager
     networks:
       main:
         aliases:
-          - "hadoop_seconadry_node_manager"
+          - "hadoop_secondary_node_manager"
 
   hadoop_resource_manager:
     build:
