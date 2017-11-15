@@ -2,4 +2,4 @@
 
 I'm trying to setup a Hadoop cluster on Docker. Shhhhh, just let it happen.
 
-I'm mostly going off this tutorial: https://www.airpair.com/hadoop/posts/getting-started-with-hadoop
+I'm mostly going off this tutorial: http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/ClusterSetup.html

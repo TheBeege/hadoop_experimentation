@@ -10,6 +10,13 @@ services:
         aliases:
           - "hadoop_name_node"
 
+  hadoop_seconadry_node_manager:
+    build:
+      context: ./seconadry_node_manager
+    networks:
+      main:
+        aliases:
+          - "hadoop_seconadry_node_manager"
 
   hadoop_resource_manager:
     build:
@@ -26,6 +33,30 @@ services:
       main:
         aliases:
           - "hadoop_data_node"
+
+  hadoop_job_history:
+    build:
+      context: ./job_history
+    networks:
+      main:
+        aliases:
+          - "hadoop_job_history"
+
+  hadoop_node_manager:
+    build:
+      context: ./node_manager
+    networks:
+      main:
+        aliases:
+          - "hadoop_node_manager"
+
+  hadoop_web_app_proxy:
+    build:
+      context: ./web_app_proxy
+    networks:
+      main:
+        aliases:
+          - "hadoop_web_app_proxy"
 
 
 networks:
