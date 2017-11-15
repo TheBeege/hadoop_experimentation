@@ -2,27 +2,31 @@ version: '3'
 
 services:
 
-        hadoop_name_node:
-                build:
-                        context: ./name_node
-                links:
-                        - "hadoop_resource_manager"
-                        - "hadoop_data_node"
-
-        hadoop_resource_manager:
-                build:
-                        context: ./resource_manager
-                links:
-                        - "hadoop_name_node"
-                        - "hadoop_data_node"
+  hadoop_name_node:
+    build:
+      context: ./name_node
+    networks:
+      main:
+        aliases:
+          - "hadoop_name_node"
 
 
+  hadoop_resource_manager:
+    build:
+      context: ./resource_manager
+    networks:
+      main:
+        aliases:
+          - "hadoop_resource_manager"
 
-        hadoop_data_node:
-                build:
-                        context: ./data_node
-                links:
-                        - "hadoop_resource_manager"
-                        - "hadoop_name_node"
+  hadoop_data_node:
+    build:
+      context: ./data_node
+    networks:
+      main:
+        aliases:
+          - "hadoop_data_node"
 
 
+networks:
+  main:
