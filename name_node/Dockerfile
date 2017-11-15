@@ -1,3 +1,3 @@
 FROM hadoop 
 
-CMD sbin/hadoop-daemon.sh --config /etc/hadoop --script hdfs start namenode
+CMD /opt/hadoop/sbin/hadoop-daemon.sh --config /etc/hadoop --script hdfs start namenode
