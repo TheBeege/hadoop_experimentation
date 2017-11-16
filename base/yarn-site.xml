@@ -1,14 +1,14 @@
 <configuration>
     <property>
         <name>yarn.resourcemanager.hostname</name>
-        <value>hadoop_resource_manager</value>
+        <value>hadoop-resource-manager</value>
     </property>
     <property>
         <name>yarn.resourcemanager.resource-tracker.address</name>
-        <value>hadoop_node_manager</value>
+        <value>hadoop-node-manager</value>
     </property>
     <property>
         <name>yarn.nodemanager.aux-services</name>
-        <value>mapreduce_shuffle</value>
+        <value>mapreduce-shuffle</value>
     </property>
 </configuration>

@@ -5,6 +5,6 @@
     </property>
     <property>
         <name>mapreduce.jobhistory.address</name>
-        <value>hadoop_job_history</value>
+        <value>hadoop-job-history</value>
     </property>
 </configuration>

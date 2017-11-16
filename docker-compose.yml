@@ -2,61 +2,54 @@ version: '3'
 
 services:
 
-  hadoop_name_node:
-    build:
-      context: ./name_node
+  hadoop-name-node:
+    image: hadoop_name_node
     networks:
       main:
         aliases:
-          - "hadoop_name_node"
+          - "hadoop-name-node"
 
-  hadoop_secondary_name_node:
-    build:
-      context: ./secondary_name_node
+  hadoop-secondary-name-node:
+    image: hadoop_secondary_name_node
     networks:
       main:
         aliases:
-          - "hadoop_secondary_name_node"
+          - "hadoop-secondary-name-node"
 
-  hadoop_resource_manager:
-    build:
-      context: ./resource_manager
+  hadoop-resource-manager:
+    image: hadoop_resource_manager
     networks:
       main:
         aliases:
-          - "hadoop_resource_manager"
+          - "hadoop-resource-manager"
 
-  hadoop_data_node:
-    build:
-      context: ./data_node
+  hadoop-data-node:
+    image: hadoop_data_node
     networks:
       main:
         aliases:
-          - "hadoop_data_node"
+          - "hadoop-data-node"
 
-  hadoop_job_history:
-    build:
-      context: ./job_history
+  hadoop-job-history:
+    image: hadoop_job_history
     networks:
       main:
         aliases:
-          - "hadoop_job_history"
+          - "hadoop-job-history"
 
-  hadoop_node_manager:
-    build:
-      context: ./node_manager
+  hadoop-node-manager:
+    image: hadoop_node_manager
     networks:
       main:
         aliases:
-          - "hadoop_node_manager"
+          - "hadoop-node-manager"
 
-  hadoop_web_app_proxy:
-    build:
-      context: ./web_app_proxy
+  hadoop-web-app-proxy:
+    image: hadoop_web_app_proxy
     networks:
       main:
         aliases:
-          - "hadoop_web_app_proxy"
+          - "hadoop-web-app-proxy"
 
 
 networks:
