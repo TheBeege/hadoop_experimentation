@@ -15,6 +15,8 @@ services:
       main:
         aliases:
           - "hadoop-secondary-name-node"
+    links:
+      - hadoop-name-node
 
   hadoop-resource-manager:
     image: hadoop_resource_manager
@@ -22,6 +24,9 @@ services:
       main:
         aliases:
           - "hadoop-resource-manager"
+    links:
+      - hadoop-name-node
+      - hadoop-secondary-name-node
 
   hadoop-data-node:
     image: hadoop_data_node
@@ -29,6 +34,11 @@ services:
       main:
         aliases:
           - "hadoop-data-node"
+    links:
+      - hadoop-name-node
+      - hadoop-secondary-name-node
+      - hadoop-resource-manager
+      - hadoop-node-manager
 
   hadoop-job-history:
     image: hadoop_job_history
@@ -36,6 +46,11 @@ services:
       main:
         aliases:
           - "hadoop-job-history"
+    links:
+      - hadoop-name-node
+      - hadoop-secondary-name-node
+      - hadoop-resource-manager
+      - hadoop-node-manager
 
   hadoop-node-manager:
     image: hadoop_node_manager
@@ -43,6 +58,10 @@ services:
       main:
         aliases:
           - "hadoop-node-manager"
+    links:
+      - hadoop-name-node
+      - hadoop-secondary-name-node
+      - hadoop-resource-manager
 
   hadoop-web-app-proxy:
     image: hadoop_web_app_proxy
@@ -50,6 +69,10 @@ services:
       main:
         aliases:
           - "hadoop-web-app-proxy"
+    links:
+      - hadoop-name-node
+      - hadoop-secondary-name-node
+      - hadoop-node-manager
 
 
 networks:

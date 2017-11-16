@@ -4,6 +4,38 @@
         <value>3</value>
     </property>
     <property>
+        <name>dfs.nameservices</name>
+        <value>hadoop-experimentation</value>
+    </property>
+    <property>
+        <name>dfs.ha.namenodes.hadoop-experimentation</name>
+        <value>hadoop-name-node,hadoop-secondary-name-node</value>
+    </property>
+
+    <property>
+        <name>dfs.namenode.rpc-address.hadoop-experimentation.hadoop-name-node</name>
+        <value>hadoop-name-node:8020</value>
+    </property>
+    <property>
+        <name>dfs.namenode.rpc-address.hadoop-experimentation.hadoop-secondary-name-node</name>
+        <value>hadoop-secondary-name-node:8020</value>
+    </property>
+
+    <property>
+        <name>dfs.namenode.http-address.hadoop-experimentation.hadoop-name-node</name>
+        <value>hadoop-name-node:50070</value>
+    </property>
+    <property>
+        <name>dfs.namenode.http-address.hadoop-experimentation.hadoop-secondary-name-node</name>
+        <value>hadoop-secondary-name-node:50070</value>
+    </property>
+
+    <property>
+        <name>dfs.namenode.shared.edits.dir</name>
+        <value>file:///mnt/filer1/dfs/ha-name-dir-shared</value>
+    </property>
+
+    <property>
         <name>dfs.namenode.name.dir</name>
         <value>file:///namenode/dfs/name</value>
     </property>
