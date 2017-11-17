@@ -8,6 +8,8 @@ services:
       main:
         aliases:
           - "hadoop-name-node"
+    volumes:
+      - ha-name-dir-shared:/mnt/filer1/dfs/ha-name-dir-shared
 
   hadoop-secondary-name-node:
     image: hadoop_secondary_name_node
@@ -17,6 +19,8 @@ services:
           - "hadoop-secondary-name-node"
     links:
       - hadoop-name-node
+    volumes:
+      - ha-name-dir-shared:/mnt/filer1/dfs/ha-name-dir-shared
 
   hadoop-resource-manager:
     image: hadoop_resource_manager
@@ -77,3 +81,6 @@ services:
 
 networks:
   main:
+
+volumes:
+  ha-name-dir-shared:

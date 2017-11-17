@@ -36,6 +36,11 @@
     </property>
 
     <property>
+        <name>dfs.client.failover.proxy.provider.mycluster</name>
+        <value>org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</value>
+    </property>
+
+    <property>
         <name>dfs.namenode.name.dir</name>
         <value>file:///namenode/dfs/name</value>
     </property>
